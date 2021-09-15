@@ -52,8 +52,8 @@ let loaded = document.querySelector('.loaded');
              setTimeout(() => {
                 // message.style.display = 'none';
                 loaded.textContent = ""
-                info.innerHTML = `Tody in <span>${locationCity}</span> (<span>${locationCountry ? locationCountry : locationCountryOne ? locationCountryOne : locationCity  }</span>)
-                The temprature is <span>${temp}</span>, but you feel like <span>${feels}</span> the weather mostly is <span>${descrip}</span> and you can feel humidity like <span>${humidity}%</span>`;
+                info.innerHTML = `Today in <span>${locationCity}</span> (<span>${locationCountry ? locationCountry : locationCountryOne ? locationCountryOne : locationCity  }</span>)
+                The temperature is <span>${temp}</span>, but you feel like it's <span>${feels}</span> the weather mostly is <span>${descrip}</span> and the  humidity is <span>${humidity}%</span>`;
             },1800);
                                                           
               }
