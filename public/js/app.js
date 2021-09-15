@@ -7,18 +7,6 @@ let message = document.querySelector('.message');
 let loaded = document.querySelector('.loaded');
 // let city = document.querySelector('.city');
 
-//   fetch('http://puzzle.mead.io/puzzle').then((response) => {
-//       const json = response.json().then(data => {
-
-//           console.log(data)
-//         })
-  
-//   })
-
-  let address = "London"
-//  city.addEventListener('input', (event) => {
-//      info.textContent = '';
-//  })
   
       form.addEventListener('submit', (e) => {
           e.preventDefault();
@@ -26,7 +14,7 @@ let loaded = document.querySelector('.loaded');
 
           info.innerHTML = '';
         //   console.log(city)
-        if(city === '' || city === undefined) {
+        if(city === ' ' || city === undefined) {
             //  message.style.display = 'block';
              message.classList.add('active')
             message.textContent = "Unable to find location"

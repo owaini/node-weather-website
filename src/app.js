@@ -10,6 +10,7 @@ const geocode = require('./utils/geocode');
 // console.log('__filename', path.join(__dirname, '../public'));
 
 const app = express();
+const port = process.env.PORT || 3000;
 
 // Define paths for Express config
 const publicDirectoryPath = path.join(__dirname, '../public');
@@ -108,40 +109,7 @@ app.get('*', (req, res) => {
     res.render('404')
 })
 
-// app.get('/', (req, res) => {
-//     res.send('Hello Express')
-// });
 
-// app.get('/help', (req, res) => {
-//     res.send([
-//         {
-//         name: 'Omar'
-//     }, {
-//         name: 'Yzn'
-//     }
-//     ])
-// })
-
-// const city = process.argv[2];
-
-// app.get('/weather', (req, res) => {
-//     geocode(city, (error, {latitude, longitude, location}) => {
-//     if (error) {
-//       return  console.log('Error', error)
-//     } 
-//     forecast(latitude, longitude, (err, forecastData) => {
-//         if(err) {
-//            return console.log('Error', err)
-//         }
-//         res.send({
-//         temp: `Tempreture in ${city}`,
-//         loc: location,
-//     })
-  
-// })
-// })
-  
-// })
-app.listen(3000, ()=> {
-    console.log('Server is up on port 3000')
+app.listen(port, ()=> {
+    console.log('Server is up on port ' + port)
 })
